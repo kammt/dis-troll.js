@@ -1,0 +1,9 @@
+name: add-a-green-tick
+on: [push]
+jobs:
+  do-something:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ls -la
+
