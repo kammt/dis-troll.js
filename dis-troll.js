@@ -1,14 +1,46 @@
-let timer = null
-let last_min = 4
-let last_max = 10
+/*
+Copyright 2023 Tobias Kamm
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+let timer = null;
+
+//Get variables from script Tag, if they exist
+let scriptTag = document.currentScript;
+
+let min_minutes = Number(scriptTag.dataset.minMinutes);
+let max_minutes = Number(scriptTag.dataset.maxMinutes);
+let autosetup = Boolean(scriptTag.dataset.autosetup);
+
+//Check that they're valid
+if(min_minutes == NaN) min_minutes = 4;
+if(max_minutes == NaN) max_minutes = min_minutes + 6;
+if(scriptTag.dataset.autosetup == undefined) autosetup = true;
+
+window.onload = function() {
+    if(autosetup) {
+        document.addEventListener("click", startDistrollTimer, true);
+        document.addEventListener("scroll", startDistrollTimer);
+    }
+}
+
 
 /**
  * Starts the countdown timer. Should be called each time when the 
  * user interacts with the site (e.g. button pressed).
  */
-function startDistrollTimer(min_minutes = 4, max_minutes = 10) {
-    last_min = 4; last_max = 10;
-
+function startDistrollTimer() {
     if(timer != null) {
         clearTimeout(timer);
     }
@@ -23,7 +55,7 @@ function playAudio() {
     //Call or ping?
     let play_call = getRandomInRange(0, 10) < 2;
     
-    let snd = null;
+    let snd;
     if(play_call) {
         snd = new Audio("data:audio/mp3;base64," + discord_call);
     } else {
@@ -33,7 +65,7 @@ function playAudio() {
 
     //Restart timer
     clearTimeout(timer);
-    timer = setTimeout(playAudio, getRandomInRange(last_min, last_max) * 1000 * 60);
+    timer = setTimeout(playAudio, getRandomInRange(min_minutes, max_minutes) * 1000 * 60);
 }
 
 const discord_ping = `
