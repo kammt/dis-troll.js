@@ -22,6 +22,6 @@ Sure! Do the following:
 3. Wait for happy customer reviews
 
 ## What can I customise?
-- `data-min-minutes` - the minimum time once a timer runs out
-- `data-max-minutes` - well.. the maximum time once a timer runs out
+- `data-min-minutes` - the minimum time that elapses until a timer runs out
+- `data-max-minutes` - well.. the maximum time that elapses until a timer runs out
 - `data-autosetup` - whether to run the autosetup or not
