@@ -1,4 +1,9 @@
-# dis-troll.js
+<h1 align="center">dis-troll.js</h1>
+<p align="center">
+<img src="https://data.jsdelivr.com/v1/package/gh/kammt/dis-troll.js/badge"> 
+<img src="https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1" alt="Volkswagen Build Status">  
+<img src="https://github.com/kammt/dis-troll.js/actions/workflows/main.yml/badge.svg">  
+</p>
 A JS script that starts to play discord ping/call sounds after site inactivity
 
 ## I love my website visitors: So how do add this on my website?
