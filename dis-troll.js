@@ -16,7 +16,7 @@ limitations under the License.
 
 let timer = null;
 
-//Get variables from script Tag, if they exist
+//Get variables from script-tag, if they exist
 let scriptTag = document.currentScript;
 
 let min_minutes = Number(scriptTag.dataset.minMinutes);
@@ -34,7 +34,6 @@ window.onload = function() {
         document.addEventListener("scroll", startDistrollTimer);
     }
 }
-
 
 /**
  * Starts the countdown timer. Should be called each time when the 
@@ -55,17 +54,11 @@ function playAudio() {
     //Call or ping?
     let play_call = getRandomInRange(0, 10) < 2;
     
-    let snd;
-    if(play_call) {
-        snd = new Audio("data:audio/mp3;base64," + discord_call);
-    } else {
-        snd = new Audio("data:audio/mp3;base64," + discord_ping);
-    }
+    let snd = new Audio("data:audio/mp3;base64," + ((play_call) ? discord_call : discord_ping));
     snd.play();
 
     //Restart timer
-    clearTimeout(timer);
-    timer = setTimeout(playAudio, getRandomInRange(min_minutes, max_minutes) * 1000 * 60);
+    startDistrollTimer();
 }
 
 const discord_ping = `
