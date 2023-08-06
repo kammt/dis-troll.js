@@ -10,7 +10,7 @@ A JS script that starts to play discord ping/call sounds after site inactivity
 Easy peasy! 
 1. Add the script to your site:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js/dis-troll.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@main/dis-troll.js"></script>
 ```
 2. Wait for happy customer reviews
 
@@ -21,7 +21,7 @@ When the user stops interacting with the site, the timer will eventually run out
 Sure! Do the following:
 1. Add the script, with autosetup disabled:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js/dis-troll.js" data-autosetup="false"></script>
+<script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@main/dis-troll.js" data-autosetup="false"></script>
 ```
 2. Every time you want to trigger the timer, call the `startDistrollTimer` function
 3. Wait for happy customer reviews
