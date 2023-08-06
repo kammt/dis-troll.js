@@ -36,7 +36,7 @@ function playAudio() {
     timer = setTimeout(playAudio, getRandomInRange(last_min, last_max) * 1000 * 60);
 }
 
-const ping_sound = `
+const discord_ping = `
 SUQzBAAAAAAFQ1RJVDIAAAASAAADd3d3LnZvaWN5Lm5ldHdvcmtUWFhYAAAAHwAAA2F1dGhvcgB3
 d3cuMTAxc291bmRib2FyZHMuY29tAFRQRTIAAAASAAADd3d3LnZvaWN5Lm5ldHdvcmtUQUxCAAAA
 EgAAA3d3dy52b2ljeS5uZXR3b3JrVFhYWAAAACEAAANncm91cGluZwB3d3cuMTAxc291bmRib2Fy
