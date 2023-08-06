@@ -1,20 +1,39 @@
 let timer = null
+let last_min = 4
+let last_max = 10
 
 /**
  * Starts the countdown timer. Should be called each time when the 
  * user interacts with the site (e.g. button pressed).
  */
 function startDistrollTimer(min_minutes = 4, max_minutes = 10) {
+    last_min = 4; last_max = 10;
+
     if(timer != null) {
-        clearTimeout(timer)
+        clearTimeout(timer);
     }
-    timeout = Math.random() * (max_minutes - min_minutes) + min_minutes;
-    timer = setTimeout(playAudio, timeout*1000*60);
+    timer = setTimeout(playAudio, getRandomInRange(min_minutes, max_minutes) * 1000 * 60);
+}
+
+function getRandomInRange(min, max) {
+    return Math.random() * (max - min) + min;
 }
 
 function playAudio() {
-    var snd = new Audio("data:audio/mp3;base64," + discord_call);
+    //Call or ping?
+    let play_call = getRandomInRange(0, 10) < 2;
+    
+    let snd = null;
+    if(play_call) {
+        snd = new Audio("data:audio/mp3;base64," + discord_call);
+    } else {
+        snd = new Audio("data:audio/mp3;base64," + discord_ping);
+    }
     snd.play();
+
+    //Restart timer
+    clearTimeout(timer);
+    timer = setTimeout(playAudio, getRandomInRange(last_min, last_max) * 1000 * 60);
 }
 
 const ping_sound = `
