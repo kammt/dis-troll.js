@@ -4,7 +4,7 @@ let timer = null
  * Starts the countdown timer. Should be called each time when the 
  * user interacts with the site (e.g. button pressed).
  */
-function startDistrollTimer(min_minutes = 1, max_minutes = 6) {
+function startDistrollTimer(min_minutes = 4, max_minutes = 10) {
     if(timer != null) {
         clearTimeout(timer)
     }
