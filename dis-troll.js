@@ -19,14 +19,20 @@ let timer = null;
 //Get variables from script-tag, if they exist
 let scriptTag = document.currentScript;
 
-let min_minutes = Number(scriptTag.dataset.minMinutes);
-let max_minutes = Number(scriptTag.dataset.maxMinutes);
-let autosetup = Boolean(scriptTag.dataset.autosetup);
+var min_minutes = Number(scriptTag.dataset.minMinutes);
+var max_minutes = Number(scriptTag.dataset.maxMinutes);
+var autosetup = Boolean(scriptTag.dataset.autosetup);
 
 //Check that they're valid
-if(min_minutes == NaN) min_minutes = 4;
-if(max_minutes == NaN) max_minutes = min_minutes + 6;
-if(scriptTag.dataset.autosetup == undefined) autosetup = true;
+if(isNaN(min_minutes)) {
+    min_minutes = 4;
+}
+if(isNaN(max_minutes)) {
+    max_minutes = min_minutes + 6;
+} 
+if(scriptTag.dataset.autosetup == undefined) {
+    autosetup = true;
+} 
 
 window.onload = function() {
     if(autosetup) {
