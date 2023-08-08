@@ -10,7 +10,7 @@
 Easy peasy! 
 1. Add the script to your site:
    ```html
-   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@main/dis-troll.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js/dis-troll.js"></script>
    ```
 2. Wait for happy customer reviews
 
@@ -21,7 +21,7 @@ When the user stops interacting with the site, the timer will eventually run out
 Sure! Do the following:
 1. Add the script, with autosetup disabled:
    ```html
-   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@main/dis-troll.js" data-autosetup="false"></script>
+   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js/dis-troll.js" data-autosetup="false"></script>
    ```
 2. Every time you want to trigger the timer, call the `startDistrollTimer` function
 3. Wait for happy customer reviews
@@ -44,5 +44,5 @@ me, you have two options:
 1. Download the current version of the script and embed this file into your website
 2. Pin a specific version using jsdelivr, e.g.
    ```html
-   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@v1.0/dis-troll.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/kammt/dis-troll.js@v1.0.1/dis-troll.js"></script>
    ```
