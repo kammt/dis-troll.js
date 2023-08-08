@@ -31,6 +31,11 @@ Sure! Do the following:
 - `data-max-minutes` - well.. the maximum time that elapses until a timer runs out
 - `data-autosetup` - whether to run the autosetup or not
 
+## Used by
+- The MemeAssembly documentation (https://memeassembly.wtf/)
+- The Artemgus Generator by xarantolus (https://artemgus.010.one/)
+- ..you? If you use this script on your site, let me know and I'll add you to this wall of fame!
+
 ## A quick word about the security of your website
 When you use dis-troll.js, you trust me that this script does not do anything malicious.
 This is something you can verify from the source code.
