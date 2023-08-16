@@ -6,7 +6,7 @@
 <p align="center"> A JS script that starts to play discord ping/call sounds after site inactivity </p>
 </p>
 
-## I love my website visitors: So how do add this on my website?
+## I love my website visitors: So how do I add this on my website?
 Easy peasy! 
 1. Add the script to your site:
    ```html
@@ -25,6 +25,11 @@ Sure! Do the following:
    ```
 2. Every time you want to trigger the timer, call the `startDistrollTimer` function
 3. Wait for happy customer reviews
+
+## But wait, my browser blocks auto-playing content
+Well, if you interacted with the website, then playing content is allowed (e.g. playing a video by pressing the play-button). As the "sound-playing" is a direct result of a website interaction (with a delay), it is not blocked by default. 
+
+This was tested on Firefox and Brave. If you find incompatibilities, feel free to report them!
 
 ## What can I customise?
 - `data-min-minutes` - the minimum time that elapses until a timer runs out
